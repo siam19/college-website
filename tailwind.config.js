@@ -33,6 +33,8 @@ module.exports = {
     display: ['responsive', 'group-hover', 'group-focus'],
     textColor: ['group-hover'],
     fill: ['group-hover'],
+    backgroundColor: ['active'],
+    boxShadow: ['active'],
   },
   plugins: [
     
