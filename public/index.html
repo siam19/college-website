@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- font color : #0C1941  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>College Website | Amar College</title>
+    <meta name="description" content="Free open source Tailwind CSS Store template">
+    <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="img/main-logo.svg">
+
+    <style>
+
+    
+      /*Footer open/load animation*/
+      .alert-footer {
+        animation-delay: 2s;
+        -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;	
+          
+      }
+    
+      /*Footer close animation*/
+      .alert-footer input:checked ~ * {
+        -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      }
+    
+      /* -------------------------------------------------------------
+       * Animations generated using Animista * w: http://animista.net, 
+       * ---------------------------------------------------------- */
+    
+      @-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-webkit-keyframes slide-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}@keyframes slide-out-top{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@-webkit-keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@keyframes slide-out-bottom{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}100%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@-webkit-keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}100%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}}@keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}100%{-webkit-transform:translateX(50px);transform:translateX(50px);opacity:0}}
+      
+      </style>
+    
+</head>
+
+<body class="bg-white font-nunito text-gray-700 work-sans leading-normal text-base tracking-normal">
+
+<nav>
+  <div class="fixed w-full shadow-xl  text-gray-700 bg-white z-50">
+    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="flex flex-row items-center justify-between p-4">
+            
+            <button class="order-last rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            
+            <div class="cursor-pointer order-first rounded-lg md:hidden focus:outline-none focus:shadow-outline">
+                <a href="">
+                    <svg  fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                        <path xmlns="http://www.w3.org/2000/svg" class="heroicon-ui" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z"/>
+                    </svg>
+                </a>
+            </div>
+            <!--------nabar: logo--------->
+            <div>
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl select-none " href="index.html">
+                    <img class="h-12 w-12 md:h-16 md:w-16" src="img/main-logo.svg" />
+                </a>
+            </div>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm md:text-base font-semibold text-gray-900 bg-gray-100 rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+            <a class="px-4 py-2 mt-2 text-sm md:text-base font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="admission.html">Admission</a>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm md:text-base font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                  <span>Academic</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+                  <div class="px-2 py-2 bg-white rounded-md shadow ">
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Curriculum</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Academic Calender</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Result</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Routine</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Syllabus</a>
+                  </div>
+              </div>
+          </div>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm md:text-base font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                  <span>Staff & Faculty</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+                  <div class="px-2 py-2 bg-white rounded-md shadow ">
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Achievements</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Principal's Message</a>
+                      <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">List of Staff & Faculty</a>
+                  </div>
+              </div>
+          </div>
+          <div @click.away="open = false" class="relative" x-data="{ open: false }">
+            <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm md:text-base font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                <span>Clubs & ECA</span>
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+                <div class="px-2 py-2 bg-white rounded-md shadow ">
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">IT Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Science Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Cultural Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Debate Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Writers Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Literature Club</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Sports</a>
+                    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Cultural Activites</a>
+                </div>
+            </div>
+          </div>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm md:text-base font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                    <span>Events</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+                    <div class="px-2 py-2 bg-white rounded-md shadow ">
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Upcoming Events</a>
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="404.html">Event Calender</a>
+                    </div>
+                </div>
+            </div> 
+            <a class="hidden md:inline-block px-4 py-2 mt-2 text-sm md:text-base font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="login.html">Login</a>
+        </nav>
+    </div>
+</div>
+</nav>
+
+
+<div class="carousel relative container mx-auto pt-20 max-w-full">
+    <div class="carousel-inner relative overflow-hidden w-full">
+
+
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="h-full w-full items-center justify-center mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right bg-slide1" style="background-position: 0 calc(100% - 10px); ">
+
+                <div class="container flex items-center justify-items-center ">
+                    
+                    <div class="md:pt-0 flex flex-col  w-full lg:w-1/2 md:ml-16 items-center md:items-start  tracking-wide">
+                        <p class=" text-theme-black text-xl sm:text-2xl my-4 py-2 sm:py-4 text-center md:text-left bg-white max-w-xs sm:max-w-full md:p-4 md:pl-6">A community with high expectation and high academic achievement</p>
+                        <a class="text-lg font-semibold inline-block no-underline text-theme-darkblue bg-white p-3 leading-relaxed pl-6 border-theme-darkblue border-2 hover:text-theme-white hover:bg-theme-darkblue hover:border-0 transition ease-in duration-75" href="admission.html">Admission Info
+                            <svg class="inline-block ml-1 mb-1 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui" d="M18.59 13H3a1 1 0 010-2h15.59l-5.3-5.3a1 1 0 111.42-1.4l7 7a1 1 0 010 1.4l-7 7a1 1 0 01-1.42-1.4l5.3-5.3z"/></svg>
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
+            <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right bg-slide2 ">
+
+                <div class="container flex items-center justify-items-center">
+                    <div class="md:pt-0 flex flex-col  w-full lg:w-1/2 md:ml-16 items-center md:items-start  tracking-wide">
+                        <p class=" text-theme-black text-xl sm:text-2xl px-4 my-4 py-2 sm:py-4 text-center md:text-left bg-white max-w-xs sm:max-w-full md:p-4 md:pl-6">A Family Of Learning dedicated to building tomorrow's youth.</p>
+                        <a class="text-lg font-semibold inline-block no-underline text-theme-darkblue bg-white p-3 leading-relaxed pl-6 border-theme-darkblue border-2 hover:text-theme-white hover:bg-theme-darkblue hover:border-0 transition ease-in duration-75" href="404.html">View Faculty
+                            <svg class="inline-block ml-1 mb-1 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui" d="M18.59 13H3a1 1 0 010-2h15.59l-5.3-5.3a1 1 0 111.42-1.4l7 7a1 1 0 010 1.4l-7 7a1 1 0 01-1.42-1.4l5.3-5.3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+        <div class="carousel-item absolute opacity-0" style="height:50vh;">
+            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom bg-slide3" style="background-position: 0 0">
+
+                
+                <div class="container flex items-center justify-items-center">
+                    <div class="md:pt-0 flex flex-col  w-full lg:w-1/2 md:ml-16 items-center md:items-start  tracking-wide">
+                        <p class=" text-theme-black text-xl sm:text-2xl my-4 py-2 sm:py-4 text-center md:text-left bg-white max-w-xs sm:max-w-full md:p-4 md:pl-6">Our vision is every child known, safe, inspired, challenged, empowered.</p>
+                        <a class="text-lg font-semibold inline-block no-underline text-theme-darkblue bg-white p-3 leading-relaxed pl-6 border-theme-darkblue border-2 hover:text-theme-white hover:bg-theme-darkblue hover:border-0 transition ease-in duration-75" href="404.html">Facilities
+                            <svg class="inline-block ml-1 mb-1 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path class="heroicon-ui" d="M18.59 13H3a1 1 0 010-2h15.59l-5.3-5.3a1 1 0 111.42-1.4l7 7a1 1 0 010 1.4l-7 7a1 1 0 01-1.42-1.4l5.3-5.3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+        <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+        
+        
+
+
+
+        <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+                <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+            </li>
+            <li class="inline-block mr-3">
+                <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+            </li>
+        </ol>
+
+    </div>
+</div>
+<!--Footer Alert for language change-->
+<div class="alert-footer w-full fixed bottom-0 z-50">
+  <input type="checkbox" class="hidden" id="footeralert">
+
+  <div class="flex items-center justify-between w-full p-2 bg-indigo-700 shadow text-white">
+    <a class="py-2 md:ml-48" href="index-alt.html">ওয়েবসাইট বাংলা ভাষায় দেখতে <span class=" underline " >ক্লিক করুন</span>  </a>
+    <label class="md:mr-48 close cursor-pointer" title="close" for="footeralert">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+      </svg>
+    </label>
+  </div>
+</div>
+
+<div class="">
+    <div class="h-12 bg-gray-900 justify-center">
+        <div class="text-center pt-2 font-light text-theme-white text-xl">Online Services</div>
+    </div>
+</div>
+<div
+class="flex flex-col items-center bg-gray-100">
+<div class="w-full pb-16 flex flex-col items-center md:flex-row md:justify-center m-w-85" >
+    
+    <div class="bg-white rounded-md transform md:hover:scale-105  flex flex-col group text-theme-black items-center h-64 w-4/5 m-4 shadow-xl mt-10 md:mt-12 hover:bg-theme-darkblue border-theme-black border-2 transition ease-in duration-75 cursor-pointer md:inline-block  md:w-1/5">
+        <div class="flex flex-col items-center "><svg class="h-32 w-32 m-4 mt-8 group-hover:text-white" xmlns="h" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <h3 class="text-2xl font-semibold group-hover:text-white text-center">Online Class</h3></div>
+    </div>
+    <div class="bg-white rounded-md transform md:hover:scale-105  flex flex-col group text-theme-black items-center h-64 w-4/5 m-4 shadow-xl mt-10 md:mt-12 hover:bg-theme-darkblue border-theme-black border-2 transition ease-in duration-75 cursor-pointer md:inline-block  md:w-1/5">
+        <div class="flex flex-col items-center "><svg class="h-32 w-32 m-4 mt-8 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M14 2l4 4L7 17H3v-4L14 2zM3 22h18"/></svg>
+        <h3 class="text-2xl font-semibold group-hover:text-white text-center">Online Exams</h3></div>
+    </div>
+    <div class="bg-white rounded-md transform md:hover:scale-105  flex flex-col group text-theme-black items-center h-64 w-4/5 m-4 shadow-xl mt-10 md:mt-12 hover:bg-theme-darkblue border-theme-black border-2 transition ease-in duration-75 cursor-pointer md:inline-block  md:w-1/5">
+        <div class="flex flex-col items-center "><svg class="h-32 w-32 m-4 mt-8 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" stoke="currentColor" viewBox="0 0 288.8 288.8"><path d="M91.9 207.4h29.6v15.2H91.9z"/><path d="M259.2 251.6a87.4 87.4 0 01-7.4-24.8c1.4-9.1 1-22.6-4.3-33.1-8.8-17.5-25.3-28.8-42-28.8-5.3 0-10.5 1.1-15.2 3.4l-5.8 2.7V34.6A34.6 34.6 0 00149.9 0H63.4c-19 0-34.5 15.5-34.5 34.6v181.9a34.6 34.6 0 0034.6 34.6h85.9l21.7 9.9a57.1 57.1 0 0116.6 23.2 7.9 7.9 0 004.2 4.2c.9.4 1.8.5 2.8.5 1.1 0 2.2-.2 3.2-.7l57.7-26.4a7.7 7.7 0 004-4.3c.5-1.9.5-4.1-.4-5.9zm-131.8-15.8h-64a19.3 19.3 0 01-19.3-19.3V34.6c0-10.7 8.7-19.3 19.3-19.3h86.4c10.7 0 19.3 8.7 19.3 19.3v121.6l-4.7-10a24.9 24.9 0 00-7.7-9.5V28.5H54.6v163.8h85.1l5.5 11.8-2-.1c-8.5 0-15.8 5.7-18.1 14.2a24 24 0 002.3 17.6zm-1-71.9l6.1 13.1H69.8V43.7h71.8v88.5c-2.1.2-4.1.8-5.9 1.7a20.4 20.4 0 00-10.8 13.1c-1.6 5.4-1 11.5 1.5 16.9zm71.9 107.2a63.7 63.7 0 00-20.3-23.7L144.3 232a9 9 0 01-4.6-9.8c.5-1.9 1.8-3 3.4-3 .6 0 1.3.2 2 .5l11.6 5.3a7.7 7.7 0 0010.8-7.8 9 9 0 00-.7-2.7l-26.6-57a9.3 9.3 0 01-.7-6.5c.3-.9.9-2.6 2.5-3.3.5-.2 1.1-.4 1.7-.4 2.2 0 5.3 1.7 7 5.3l16.3 34.7a7.7 7.7 0 0010.1 3.7l19.5-8.9c2.8-1.3 5.7-1.9 8.8-1.9 11 0 22.2 8 28.5 20.5a43.2 43.2 0 012.9 23.9c-1 6.3 2.6 18.2 5.7 26.5l-44.2 20z"/><path d="M91.2 101.9H80.6v-9.2h10.6v-5.4c-3-.9-6.7-2.2-10.9-3.9l6.9-10 16.2 5v14.3h21.4v9.2h-21.4l-.1 25.9 6.5-.5c4.5-.6 7.8-2 9.6-4 .7-.6 1.1-1.4 1.2-2.2l.1-.4c-1.2.2-2.4.2-3.7 0a9.4 9.4 0 01-6-3.2 7 7 0 01-1.8-5.9 7.6 7.6 0 013.6-5.2c2-1.3 4.3-1.8 6.8-1.4 3.1.4 5.5 2.3 7.3 5.7 1.9 3.8 2.6 8 1.8 12.4-.4 2.6-1 4.6-1.9 6.1-3 5.1-10.8 8.1-23.4 9H91.2v-36.3z"/></svg>
+        <h3 class="text-2xl font-semibold group-hover:text-white text-center">Fee Payment</h3></div>
+    </div>
+    <div class="bg-white rounded-md transform md:hover:scale-105  flex flex-col group text-theme-black items-center h-64 w-4/5 m-4 shadow-xl mt-10 md:mt-12 hover:bg-theme-darkblue border-theme-black border-2 transition ease-in duration-75 cursor-pointer md:inline-block  md:w-1/5">
+        <div class="flex flex-col items-center "><svg class="h-32 w-32 m-4 mt-8 group-hover:text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+        <h3 class="text-2xl font-semibold group-hover:text-white text-center">Admission</h3></div>
+    </div>
+</div>
+</div>
+
+<section class="my-8 h-24 flex flex-col items-center mb-40">
+  <h1 class="text-center text-gray-700 text-3xl md:text-3xl mb-2"> We are a dedicated family consisting</h1>
+  <div class="w-full m-w-85">
+    <div class="flex items-center">
+      <div class="flex-1 text-theme-black text-center p-4 py-2 m-2">
+        <div class="text-4xl md:text-5xl font-black ">126</div>
+        <div class="text-lg md:text-xl text-gray-700">Teachers</div>
+      </div>
+      <div class="flex-1 text-theme-black text-center p-4 py-2 m-2">
+        <div class="text-4xl md:text-5xl font-black ">52</div>
+        <div class="text-lg md:text-xl text-gray-700">Staff</div>
+      </div>
+      <div class="flex-1 text-theme-black text-center p-4 py-2 m-2">
+        <div class="text-4xl md:text-5xl font-black ">1250</div>
+        <div class="text-lg md:text-xl text-gray-700">Students</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex flex-col items-center">
+  <div class="md:w-9/12">
+    <div class="flex flex-col md:flex-auto md:flex-row-reverse items-center">
+      <div class="w-full py-6 bg-indigo-600 rounded-xl">
+        <h2 class="text-center text-2xl font-semibold text-gray-800 pb-2" >Recent Notices:</h2>
+        <ul class=" text-gray-900">
+          <li class=" my-2 mx-4 p-2 px-4 rounded-lg bg-gray-200 font-medium "><a href=""><span class=" font-bold text-gray-700">26 Oct, 2020:</span> Exam Routine 2020 for XII Pre-Test Exam</a></li>
+          <li class=" my-2 mx-4 p-2 px-4 rounded-lg bg-gray-200 font-medium "><a href=""><span class=" font-bold text-gray-700">12 Oct, 2020:</span> Exam Routine 2020 for XI Yearly Exam</a></li>
+          <li class=" my-2 mx-4 p-2 px-4 rounded-lg bg-gray-200 font-medium "><a href=""><span class=" font-bold text-gray-700">28 Sept, 2020:</span> Parent Meeting Notice for August 2020</a></li>
+          <li class=" my-2 mx-4 p-2 px-4 rounded-lg bg-gray-200 font-medium "><a href=""><span class=" font-bold text-gray-700">16 Sept, 2020:</span> Inter College Basketball Tournament Notice</a></li>
+        </ul>
+        <a href="">
+          <div class="mt-4 text-lg text-center font-semibold">Load more
+          <svg class="w-5 h-5 inline-block " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+        </a>
+      </div>
+      <div class="my-8 md:max-w-6xl xl:m-w-75">
+        <div class="mx-4">
+          <h1 class="text-3xl md:text-5xl  font-semibold mb-3">Our History</h1>
+          <p class="md:text-lg ">           
+              Founded in 1983, Amar College is one of the most prestigious colleges in Bangladesh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et sem ligula. Fusce viverra aliquet neque ut posuere. Quisque purus risus, bibendum eu blandit vel, aliquam sit amet arcu. Donec ac accumsan urna. Integer dui lorem, gravida vel purus a, aliquet blandit sapien. Integer pellentesque nulla eu lacus lacinia tincidunt. Donec molestie pretium libero, tristique sodales arcu sollicitudin et. Sed pulvinar porta sapien, quis faucibus risus cursus in. Donec ipsum turpis, viverra et ullamcorper id, condimentum sit amet ante. Praesent scelerisque hendrerit sapien sed tristique. Quisque rhoncus nisi id egestas varius. Vivamus consectetur ante ipsum, vel tincidunt quam vulputate tincidunt. Quisque ac lectus at erat imperdiet hendrerit. Proin pretium lorem tortor, fermentum vulputate nunc euismod ac. Proin cursus nisi ut ipsum feugiat vestibulum. Quisque et dolor porta ante tempus hendrerit. <br><br>
+              Donec pulvinar nisl id dui hendrerit semper. Donec commodo, nisl eget pellentesque porta, dui ante dapibus ante, nec dictum augue nulla vel mi. Suspendisse sit amet sagittis dolor. Etiam egestas nulla nisl, sit amet ullamcorper leo blandit vel. Nunc non ornare magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et libero ac dolor tempor tincidunt id non enim. Etiam blandit nulla at nulla posuere ornare. Aliquam bibendum non mi eget semper. Donec vel aliquam mi, vitae ultricies diam. Mauris sit amet mattis nunc. Donec vehicula dui vel auctor venenatis. Aenean gravida libero ac nulla semper, nec interdum felis aliquet. Nullam elementum risus vitae purus congue, at ornare libero vulputate. Suspendisse sodales tortor ac lectus congue, eu tincidunt velit interdum. Quisque sed sem eget quam blandit gravida. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="relative flex items-top justify-center w-full sm:items-center sm:pt-0 m-0 md:m-8">
+  <div class="w-full md:m-w-85 sm:px-6 lg:px-8">
+      <div class="overflow-hidden "></div>
+          <div class="w-full flex ">
+              <div class="p-6 bg-gray-100 w-full max-w-screen-sm sm:rounded-lg align-middle">
+                  <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                      Contact Us
+                  </h1>
+                  <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                      Location of our Campus
+                  </p>
+
+                  <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                        <a href="">
+                          Amar College St, Elaka, Dhaka,
+                          1536
+                          <span class="md:hidden font-normal">(View on Maps)</span>  
+                        </a>
+                      </div>
+
+                  </div>
+
+                  <div class="flex items-center mt-4 text-gray-600 dark:text-gray-400">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                      </svg>
+                      <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                          +880 178 586 3769
+                      </div>
+                  </div>
+
+                  <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                      <div class="ml-4 text-md tracking-wide font-semibold w-40">
+                          info@acme.org
+                      </div>
+                  </div>
+              </div>
+
+              <div class="hidden md:inline-block " style="width: 100%"><iframe class=" w-full" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=23.810651,%2090.4126466%20+(Amar%20College)&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>              
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<footer>
+<!-- component -->
+  <div class="bg-theme-black">
+    <div class="max-w-6xl m-auto pt-4 text-gray-600 flex flex-wrap justify-center">
+      <div class="p-5 w-48 ">
+          <div class="text-lg text-gray-200 font-medium">Admission</div>
+          <a class="my-3 block" href="admission.html">KG-Admssion 2020</a><a class="my-3 block" href="admission.html">XI College Admission <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="admission.html">School Admission <span class="text-teal-600 text-xs p-1"></span></a>
+      </div>
+      <div class="p-5 w-48 ">
+          <div class="text-lg text-gray-200 font-medium">Academic</div>
+          <a class="my-3 block" href="login.html">Curriculum</a><a class="my-3 block" href="login.html">Calender<span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="login.html">Result</a><a class="my-3 block" href="login.html">Routine</a><a class="my-3 block" href="login.html">Syllabus</a> 
+      </div>
+      <div class="p-5 w-48 ">
+          <div class="text-lg text-gray-200 font-medium">Staff & Faculty</div>
+          <a class="my-3 block" href="404.html">Achievements</a><a class="my-3 block" href="404.html">Principal's Message <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="404.html">List of Staff & Faculty </a> 
+      </div>
+      <div class="p-5 w-48 ">
+          <div class="text-lg text-gray-200 font-medium">Clubs & ECA</div>
+          <a class="my-3 block" href="404.html">IT Club</a><a class="my-3 block" href="404.html">Cultural Club</a><a class="my-3 block" href="404.html">Writer's Club<span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="404.html">Science Club <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="404.html">Debate Club <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="404.html">Sports <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="404.html">Cultural Activites <span class="text-teal-600 text-xs p-1"></span></a>
+      </div>
+      <div class="p-5 w-48 ">
+          <div class="text-lg text-gray-200 font-medium">Support</div>
+          <a class="my-3 block" href="/#">Help Center</a><a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a> 
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="bg-theme-black pt-2 ">
+    <div class="flex items-center pb-5 px-3 m-auto pt-5 border-t border-gray-700 text-gray-500 text-sm flex-col text-center md:flex-row max-w-6xl">
+      <img class="h-16 w-16 md:h-12 md:w-12 mx-4" src="img/main-logo_white.svg" alt="">
+      <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
+      
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
